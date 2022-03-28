@@ -65,6 +65,7 @@ class MainPageController extends BaseController
 
         $course_lists = MainCourseList::all()->map(function ($course_list){
             return [
+                'id' => $course_list->id,
                 'title' => $course_list->title,
                 'default_type' => $course_list->default_type,
                 'list' => $course_list->list,
